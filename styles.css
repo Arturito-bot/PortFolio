@@ -133,17 +133,30 @@ nav ul li a:hover {
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
+/* ... (autres styles) ... */
+
 #projects {
     background: #eaeaea;
     padding: 50px 0;
 }
 
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-link {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Utilise la couleur du texte par défaut */
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
+}
+
 .project {
     background: white;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -170,11 +183,7 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-.project .project-description {
-    margin-top: 10px;
-    color: #555;
-    font-size: 14px;
-}
+/* ... (autres styles) ... */
 
 /* --------------------------- CONTACT FORM --------------------------- */
 form {
