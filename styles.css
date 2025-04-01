@@ -429,7 +429,7 @@ footer {
     grid-column: 1;
     display: grid;
     place-items: center; /* Centre horizontalement et verticalement */
-    margin: 0 20px; /* Ajoute des marges à gauche et à droite */
+    margin: 0 50px; /* Ajoute des marges à gauche et à droite */
     padding: 20px; /* Ajoute du padding autour du bouton */
 }
 
