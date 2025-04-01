@@ -128,3 +128,172 @@ footer {
   color: #aaa;
 }
 
+                                            /* ---------------------------- Projet1 --------------------- */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #151515;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header .nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+header .nav-list li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-overview {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.project-overview h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.project-overview p {
+    font-size: 18px;
+    color: #555;
+}
+
+.cta-section {
+    margin-top: 20px;
+}
+
+.button {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    background-color: #151515;
+    color: #eee;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+.button-span {
+    color: #aaa;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 200px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Feedback Section */
+.feedback {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feedback input[type="range"] {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.feedback textarea {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.feedback button {
+    margin-top: 20px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.toggle-switch label {
+    font-size: 18px;
+}
+
+.toggle-switch input[type="checkbox"] {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Loader */
+.loader {
+    display: none;
+    margin: 20px auto;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+footer {
+    background-color: #151515;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+
