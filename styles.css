@@ -412,14 +412,21 @@ footer {
     padding-top: 5px;
 }
 
-#contact form {
-    max-width: 400px;
-    margin: 0 auto;
+#contact div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes de largeur égale */
+    align-items: flex-start;
+    gap: 20px; /* Ajoute un espacement entre les colonnes */
 }
 
-/* Styles pour le lien LinkedIn */
-#contact .tooltip-container {
+#contact form {
+    grid-column: 2; /* Place le formulaire dans la deuxième colonne */
+    max-width: 400px; /* Limite la largeur du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+}
+
+#contact div .tooltip-container {
+    grid-column: 1; /* Place le lien LinkedIn dans la première colonne */
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Ajoute de l'espace au-dessus du lien */
 }
