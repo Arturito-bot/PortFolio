@@ -276,45 +276,17 @@ footer {
     border-radius: 10px;
 }
 
+/* Suppression des règles concernant la bulle */
 .tooltip {
-    position: absolute;
-    top: -60px; /* Ajuste la position de la bulle */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px 20px; /* Ajuste le padding pour réduire la taille */
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s;
-    border-radius: 5px; /* Réduit le rayon de la bordure */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Simplifie l'ombre */
-    background-color: #333; /* Couleur de fond plus foncée */
-    color: #fff; /* Couleur de texte blanche */
-    font-size: 14px; /* Réduit la taille de la police */
-    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+    display: none; /* Cache la bulle */
 }
 
+/* Suppression des règles concernant l'affichage de la bulle au survol */
 .tooltip-container:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
+    display: none; /* Cache la bulle au survol */
 }
 
-/* Cache les éléments inutiles */
-.profile,
-.tooltip .user,
-.tooltip .name,
-.tooltip .username,
-.tooltip .about {
-    display: none;
-}
-
-.tooltip-container:hover .tooltip {
-    top: -60px; /* Ajuste la position de la bulle */
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-
+/* Le reste du code CSS reste inchangé */
 .icon {
     text-decoration: none;
     color: #fff;
