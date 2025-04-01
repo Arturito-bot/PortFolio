@@ -233,3 +233,10 @@ footer {
 .button-span {  
     color: #aaa;
 }
+/* Conteneur pour centrer le bouton */
+.button-container {
+    display: flex;               /* Utilisation de Flexbox */
+    justify-content: center;     /* Centre le bouton horizontalement */
+    align-items: center;         /* Centre le bouton verticalement (si nécessaire) */
+    margin-top: 20px;            /* Un peu d'espace au-dessus du bouton */
+}
