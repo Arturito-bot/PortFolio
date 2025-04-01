@@ -1,3 +1,88 @@
+                        /* ---------------------------ABOUT-----------------------*/
+/* Section À propos */
+.about-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+/* Conteneur de la section avec texte et CV */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Style pour le texte à gauche */
+.about-text {
+    flex: 1;
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Style pour l'aperçu du CV à droite */
+.cv-preview {
+    flex: 1;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+/* Image de l'aperçu du CV */
+.cv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.cv-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style pour le bouton */
+.button {
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    background-color: #4CAF50;
+    color: #fff;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    background-color: #45a049;
+}
+
+/* Adaptation pour petits écrans */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv-preview {
+        margin-top: 30px;
+    }
+}
+
+
 /* Styles généraux */
 body {
     font-family: Arial, sans-serif;
