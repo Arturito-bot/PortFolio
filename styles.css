@@ -430,8 +430,8 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center; /* Centre verticalement */
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 60px;
 }
 
 #contact div .tooltip-container a.icon {
