@@ -25,12 +25,14 @@
         <h2>À propos de moi</h2>
         <div class="about-container">
             <div class="about-text">
-                <p>Étudiant ingénieur en systèmes embarqués et télécommunications, passionné par l’IA, l’optimisation et le traitement du signal.<br>
+                <p>
+                    Étudiant ingénieur en systèmes embarqués et télécommunications, passionné par l’IA, l’optimisation et le traitement du signal.<br>
                     Mon objectif est de toujours améliorer mes compétences techniques et d’appliquer la théorie dans des projets réels pour résoudre des problèmes complexes.<br>
                     Je mets à disposition sur ce site mon CV, quelques présentations de projets que j'ai pu réaliser en extra scolaire et un moyen de me contacter si une quelconque envie vous vient.<br>
-                    Pour mes projets scolaires ou de stage, je suis ouvert à en parler mais je ne les posterai pas ici.
+                    Pour mes projets scolaires ou de stage, je suis ouvert à en parler mais je ne les posterai pas ici.<br>
                     Pour me contacter, je vous laisse le faire via la page <a href="#contact">contact</a>.<br><br>
-                    Bonne visite ...</p>
+                    Bonne visite ...
+                </p>
             </div>
             <div class="cv-preview">
                 <h3>Mon CV</h3>
@@ -68,12 +70,49 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>N'hésitez pas à me contacter pour échanger sur mes projets !</p>
-        <form>
-            <input type="text" placeholder="Votre nom" required>
-            <input type="email" placeholder="Votre email" required>
-            <textarea placeholder="Votre message" required></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+
+        <div style="display: flex; align-items: flex-start; justify-content: space-between;">
+            <div class="tooltip-container" style="margin-right: 20px;">
+                <div class="tooltip">
+                    <div class="profile">
+                        <div class="user">
+                            <div class="img">AW</div>
+                            <div class="details">
+                                <div class="name">Arthur Westphal</div>
+                                <div class="username">@ArthurWestphal</div>
+                            </div>
+                        </div>
+                        <div class="about">Mon profil LinkedIn</div>
+                    </div>
+                </div>
+                <div class="text">
+                    <a class="icon" href="https://www.linkedin.com/in/arthur-westphal/">
+                        <div class="layer">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span class="fab fa-linkedin">
+                                <svg viewBox="0 0 448 512" height="1em">
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                                    ></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="text">LinkedIn</div>
+                    </a>
+                </div>
+            </div>
+
+            <form>
+                <input type="text" placeholder="Votre nom" required>
+                <input type="email" placeholder="Votre email" required>
+                <textarea placeholder="Votre message" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
     </section>
 
     <footer>
