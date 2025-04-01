@@ -421,3 +421,9 @@ footer {
 #contact form {
     flex: 1;
 }
+/* Modification pour centrer le lien LinkedIn */
+#contact div .tooltip-container {
+    width: 30%; /* Ajustez cette valeur selon l'espace disponible */
+    display: flex;
+    justify-content: center;
+}
