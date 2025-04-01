@@ -82,6 +82,42 @@
     }
 }
 
+                  /* ------------------------------ STICKY HEADER --------------------------------*/
+/* Rendre la barre de navigation sticky */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #151515;  /* Couleur de fond pour la barre de navigation */
+    z-index: 1000;  /* Pour que la barre soit au-dessus des autres éléments */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Ombre pour une meilleure visibilité */
+    padding: 10px 20px;  /* Ajouter un peu de padding pour la mise en forme */
+    width: 100%;  /* Assurer que la nav prenne toute la largeur */
+}
+
+/* Optionnel : Ajoute un style à tes liens de navigation pour les rendre plus visibles */
+nav ul {
+    display: flex;
+    justify-content: center;  /* Centrer les liens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;  /* Espacement entre les éléments */
+}
+
+nav ul li a {
+    color: white;  /* Couleur du texte */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #f39c12;  /* Couleur au survol */
+}
+
 
 /* Styles généraux */
 body {
