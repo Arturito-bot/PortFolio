@@ -433,15 +433,13 @@ footer {
 }
 
 #contact div .tooltip-container .hitbox-wrapper {
-    width: 150px; /* Ajustez cette valeur */
-    height: 60px; /* Ajustez cette valeur */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: auto; /* Ajustez cette valeur pour qu'elle corresponde à la taille du bouton */
+    height: auto; /* Ajustez cette valeur pour qu'elle corresponde à la taille du bouton */
+    display: inline-block; /* Utilisez inline-block pour ajuster la taille au contenu */
 }
 
 #contact div .tooltip-container a.icon {
-    display: block;
-    width: 100%;
-    height: 100%;
+    display: inline-block; /* Assurez-vous que le lien est inline-block */
+    width: auto; /* Ajustez la largeur automatiquement */
+    height: auto; /* Ajustez la hauteur automatiquement */
 }
