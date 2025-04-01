@@ -207,6 +207,9 @@ form {
 #contact h2 { /* Déplacé à l'intérieur de la règle form */
     text-align: center;
 }
+#contact p {
+    text-align: center;
+}
 
 input, textarea {
     margin: 10px 0;
