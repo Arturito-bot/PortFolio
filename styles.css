@@ -20,13 +20,24 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Ombre pour meilleure visibilité */
 }
 
+/* ------------------------------ STICKY HEADER --------------------------------*/
+/* Rendre la barre de navigation sticky */
 nav {
-    background-color: #151515;  /* Couleur de fond pour la barre de navigation */
     position: sticky;
     top: 0;
+    background-color: #151515;  /* Couleur de fond pour la barre de navigation */
     z-index: 1000;  /* Pour que la barre soit au-dessus des autres éléments */
-    padding: 10px 20px;  /* Ajouter du padding pour la mise en forme */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Ombre pour une meilleure visibilité */
+    padding: 10px 20px;  /* Ajouter un peu de padding pour la mise en forme */
     width: 100%;  /* Assurer que la nav prenne toute la largeur */
+}
+
+/* Pour s'assurer que le nom n'est pas sticky et reste en haut */
+.header-name {
+    text-align: center;
+    background-color: #222; /* Couleur de fond pour la section avec le nom */
+    padding: 20px;
+    color: white;
 }
 
 nav ul {
