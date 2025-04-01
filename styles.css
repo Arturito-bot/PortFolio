@@ -433,7 +433,8 @@ footer {
 }
 
 #contact div .tooltip-container .hitbox-wrapper {
- 
+    width: 150px; /* Ajustez cette valeur */
+    height: 60px; /* Ajustez cette valeur */
     display: flex;
     justify-content: center;
     align-items: center;
