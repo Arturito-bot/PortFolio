@@ -371,7 +371,7 @@ footer {
     grid-column: 1;
     display: grid;
     place-items: center;
-    margin: 0 20px;
+    margin: 0 50px;
     padding: 20px;
 }
 
