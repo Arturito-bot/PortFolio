@@ -263,5 +263,6 @@ footer {
 .button-container {
     display: flex;               /* Utilisation de Flexbox */
     justify-content: center;     /* Centre le bouton horizontalement */        
-    margin-top: 20px;            /* Un peu d'espace au-dessus du bouton */
+    margin-top: 20px;            /* Un peu d'espace au-dessus du bouton */    
+    margin-bottom: 20px; 
 }
