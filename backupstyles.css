@@ -6,6 +6,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
 /* Header */
@@ -78,9 +79,15 @@ nav ul li a:hover {
 
 .about-text {
     flex: 1;
-    text-align: left;
+    text-align: justify; /* Justifie le texte */
     font-size: 18px;
     color: #333;
+    line-height: 1.6; /* Améliore l'espacement entre les lignes */
+    padding: 20px; /* Ajoute un peu d'espace autour du texte */
+    display: flex; /* Ajout de flexbox */
+    flex-direction: column; /* Organisation en colonne */
+    justify-content: center; /* Centrage vertical */
+}
 }
 
 .cv-preview {
@@ -133,17 +140,34 @@ nav ul li a:hover {
 }
 
 /* --------------------------- PROJECT SECTION --------------------------- */
+/* ... (autres styles) ... */
+
 #projects {
     background: #eaeaea;
     padding: 50px 0;
+    
+}
+#projects h2 {
+    text-align: center;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-link {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Utilise la couleur du texte par défaut */
+    width: 80%;
+    max-width: 600px;
+    margin: 20px;
 }
 
 .project {
     background: white;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -170,11 +194,7 @@ nav ul li a:hover {
     line-height: 1.5;
 }
 
-.project .project-description {
-    margin-top: 10px;
-    color: #555;
-    font-size: 14px;
-}
+/* ... (autres styles) ... */
 
 /* --------------------------- CONTACT FORM --------------------------- */
 form {
@@ -182,6 +202,14 @@ form {
     margin: auto;
     display: flex;
     flex-direction: column;
+    padding-bottom: 20px;
+}
+
+#contact h2 { /* Déplacé à l'intérieur de la règle form */
+    text-align: center;
+}
+#contact p {
+    text-align: center;
 }
 
 input, textarea {
@@ -204,7 +232,6 @@ button {
 button:hover {
     background: #444;
 }
-
 /* --------------------------- FOOTER --------------------------- */
 footer {
     text-align: center;
@@ -237,5 +264,5 @@ footer {
 .button-container {
     display: flex;               /* Utilisation de Flexbox */
     justify-content: center;     /* Centre le bouton horizontalement */        
-    margin-top: 20px;            /* Un peu d'espace au-dessus du bouton */
+    margin-top: 20px;            /* Un peu d'espace au-dessus du bouton */     
 }
