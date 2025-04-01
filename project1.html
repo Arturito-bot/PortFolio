@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html">Retour à l'accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Project Overview -->
+    <section class="project-overview">
+        <h1>Convertisseur Youtube Mp3/Mp4</h1>
+        <p>Ce projet permet de convertir des vidéos YouTube en formats Mp3 ou Mp4, tout en évitant les publicités et les restrictions des sites de conversion en ligne.</p>
+        <div class="cta-section">
+            <button class="button">
+                Voir démonstration
+                <span class="button-span"> ─ Convertisseur Youtube</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Fonctionnalités</h2>
+        <div class="feature-card">
+            <h3>Conversion Rapide</h3>
+            <p>Permet une conversion rapide des vidéos sans avoir à attendre de longues minutes.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Sans Publicité</h3>
+            <p>Évitez les interruptions causées par les publicités grâce à notre outil.</p>
+        </div>
+    </section>
+
+    <!-- User Feedback Section -->
+    <section class="feedback">
+        <h2>Donnez votre avis</h2>
+        <form>
+            <label for="rating">Évaluez le projet :</label>
+            <input type="range" id="rating" name="rating" min="1" max="5" value="3">
+            <span>Note: <span id="rating-value">3</span></span>
+            
+            <label for="comment">Votre commentaire :</label>
+            <textarea id="comment" name="comment" placeholder="Votre avis sur ce projet" rows="4"></textarea>
+
+            <button type="submit" class="button">Envoyer</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Loader (for async actions like form submission or project demo loading) -->
+    <div id="loader" class="loader"></div>
+
+    <!-- Toggle Switch for theme or settings -->
+    <div class="toggle-switch">
+        <label for="darkMode">Mode sombre</label>
+        <input type="checkbox" id="darkMode" name="darkMode">
+    </div>
+
+    <script>
+        // Update the rating value dynamically
+        document.getElementById('rating').addEventListener('input', function() {
+            document.getElementById('rating-value').textContent = this.value;
+        });
+    </script>
+</body>
+</html>
