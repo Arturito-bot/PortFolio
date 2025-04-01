@@ -135,6 +135,7 @@ nav ul li a:hover {
 /* --------------------------- PROJECT SECTION --------------------------- */
 #projects {
     background: #eaeaea;
+    padding: 50px 0;
 }
 
 .project {
@@ -145,6 +146,11 @@ nav ul li a:hover {
     max-width: 600px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
 }
 
 .project img {
@@ -154,10 +160,20 @@ nav ul li a:hover {
 
 .project h3 {
     margin-top: 15px;
+    font-size: 22px;
+    color: #333;
 }
 
 .project p {
     color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.project .project-description {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
 }
 
 /* --------------------------- CONTACT FORM --------------------------- */
