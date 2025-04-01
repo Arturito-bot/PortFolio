@@ -204,9 +204,7 @@ form {
     flex-direction: column;
 }
 
-
-}
-#contact h2 {
+#contact h2 { /* Déplacé à l'intérieur de la règle form */
     text-align: center;
 }
 
@@ -230,7 +228,6 @@ button {
 button:hover {
     background: #444;
 }
-
 /* --------------------------- FOOTER --------------------------- */
 footer {
     text-align: center;
