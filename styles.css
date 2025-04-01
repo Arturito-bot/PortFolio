@@ -414,24 +414,30 @@ footer {
 
 #contact div {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes de largeur égale */
+    grid-template-columns: 1fr 1fr 1fr;
     align-items: flex-start;
-    gap: 20px; /* Ajoute un espacement entre les colonnes */
+    gap: 20px;
 }
 
 #contact form {
-    grid-column: 2; /* Place le formulaire dans la deuxième colonne */
-    max-width: 400px; /* Limite la largeur du formulaire */
-    margin: 0 auto; /* Centre le formulaire horizontalement */
+    grid-column: 2;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 #contact div .tooltip-container {
-    grid-column: 1; /* Place le lien LinkedIn dans la première colonne */
+    grid-column: 1;
     display: flex;
     justify-content: center;
-    align-items: center; /* Centre verticalement */
-    max-width: 100px;
-    
+    align-items: center;
+}
+
+#contact div .tooltip-container .hitbox-wrapper {
+    width: 150px; /* Ajustez cette valeur */
+    height: 60px; /* Ajustez cette valeur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact div .tooltip-container a.icon {
