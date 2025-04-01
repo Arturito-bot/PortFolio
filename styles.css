@@ -410,9 +410,9 @@ footer {
 #contact div .linkedin-container {
     grid-column: 1;
     display: grid;
-    place-items: center; /* Centre horizontalement et verticalement */
-    margin: 0 20px; /* Ajoute des marges à gauche et à droite */
-  
+    place-items: center;
+    margin: 0 20px;
+    padding: 20px;
 }
 
 #contact div .tooltip-container {
