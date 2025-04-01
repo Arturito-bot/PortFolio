@@ -276,17 +276,8 @@ footer {
     border-radius: 10px;
 }
 
-/* Suppression des règles concernant la bulle */
-.tooltip {
-    display: none; /* Cache la bulle */
-}
+/* Suppression de toutes les règles liées à la bulle */
 
-/* Suppression des règles concernant l'affichage de la bulle au survol */
-.tooltip-container:hover .tooltip {
-    display: none; /* Cache la bulle au survol */
-}
-
-/* Le reste du code CSS reste inchangé */
 .icon {
     text-decoration: none;
     color: #fff;
@@ -361,37 +352,6 @@ footer {
     text-align: center;
     fill: #1da1f2;
     background: #000;
-}
-.user {
-    display: flex;
-    gap: 10px;
-}
-.img {
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    font-weight: 700;
-    border: 1px solid #1da1f2;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
-}
-.name {
-    font-size: 17px;
-    font-weight: 700;
-    color: #1da1f2;
-}
-.details {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    color: #fff;
-}
-.about {
-    color: #ccc;
-    padding-top: 5px;
 }
 
 #contact div {
