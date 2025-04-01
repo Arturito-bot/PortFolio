@@ -429,4 +429,11 @@ footer {
     grid-column: 1; /* Place le lien LinkedIn dans la première colonne */
     display: flex;
     justify-content: center;
+    align-items: center; /* Centre verticalement */
+}
+
+#contact div .tooltip-container a.icon {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
