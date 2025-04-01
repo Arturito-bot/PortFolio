@@ -425,25 +425,15 @@ footer {
     margin: 0 auto;
 }
 
-#contact div .tooltip-container {
+#contact div .linkedin-container {
     grid-column: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center; /* Centre horizontalement et verticalement */
 }
 
-#contact div .tooltip-container .hitbox-wrapper {
-    width: 150px; /* Ajustez cette valeur */
-    height: 60px; /* Ajustez cette valeur */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bouton-linkedin {
-    display: inline-block; /* Ou flex si nécessaire */
-    width: auto; /* Empêche d'occuper toute la colonne */
-    padding: 10px 20px; /* Ajuste le padding */
+#contact div .tooltip-container {
+    width: 50px;
+    height: 50px;
 }
 
 #contact div .tooltip-container a.icon {
