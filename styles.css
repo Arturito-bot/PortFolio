@@ -415,14 +415,9 @@ footer {
 #contact div {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 #contact form {
-    max-width: 400px; /* Ajustez cette valeur pour contrôler la largeur du formulaire */
-    margin: 0 auto; /* Centrer horizontalement */
-}
-/* Modification pour centrer le lien LinkedIn */
-#contact div .tooltip-container {
-  margin-right: 200px
+    flex: 1;
 }
