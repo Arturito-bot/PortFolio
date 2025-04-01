@@ -148,8 +148,7 @@ nav ul li a:hover {
     
 }
 #projects h2 {
-    margin-left: 20px; /* Ajoute une marge à gauche */
-    margin-right: 20px; /* Ajoute une marge à droite */
+    text-align: center;
 }
 
 .projects-container {
