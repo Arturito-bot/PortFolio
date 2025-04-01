@@ -440,6 +440,12 @@ footer {
     align-items: center;
 }
 
+.bouton-linkedin {
+    display: inline-block; /* Ou flex si nécessaire */
+    width: auto; /* Empêche d'occuper toute la colonne */
+    padding: 10px 20px; /* Ajuste le padding */
+}
+
 #contact div .tooltip-container a.icon {
     display: block;
     width: 100%;
