@@ -289,17 +289,19 @@ footer {
     box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
         inset -5px -5px 15px rgba(255, 255, 255, 0.1),
         5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    width: 120px; /* Réduit la largeur de la bulle */
+    height: 40px; /* Réduit la hauteur de la bulle */
+    display: flex; /* Utilise flexbox pour centrer le texte */
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: center; /* Centre horizontalement le texte */
 }
 
 .profile {
-    background: #2a2b2f;
-    border-radius: 10px 15px;
-    padding: 10px;
-    border: 1px solid rgba(11, 63, 95, 1);
+    display: none; /* Cache le profil */
 }
 
 .tooltip-container:hover .tooltip {
-    top: -150px;
+    top: -60px; /* Ajuste la position de la bulle */
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
