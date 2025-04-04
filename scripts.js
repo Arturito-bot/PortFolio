@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('nav a');
+    const internalLinks = document.querySelectorAll('a[href^="#"]'); // Sélectionne tous les liens dont l'href commence par "#"
 
-    navLinks.forEach(link => {
+    internalLinks.forEach(link => {
         link.addEventListener('click', function(event) {
-            event.preventDefault();
+            if (this.getAttribute('href') !== '#') { // Exclut les liens "#" vides
+                event.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
 
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 60, // Ajuste cette valeur si nécessaire
-                    behavior: 'smooth'
-                });
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 60, // Ajuste si nécessaire
+                        behavior: 'smooth'
+                    });
+                }
             }
         });
     });
