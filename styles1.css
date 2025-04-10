@@ -289,3 +289,7 @@ footer {
 .toggle-switch input[type="checkbox"] {
     margin-left: 10px;
 }
+.cta-section {
+    text-align: center; /* Centre le contenu horizontalement */
+    padding: 20px;
+}
