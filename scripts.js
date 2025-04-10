@@ -18,3 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+/* ----------------------------------------------Video POP UP--------------------------------------------*/
+
+<script>
+// Ouvrir le modal vidéo
+document.getElementById('demoBtn').addEventListener('click', function() {
+    var modal = document.getElementById('videoModal');
+    var iframe = document.getElementById('videoIframe');
+    // Remplace par l'URL de la vidéo YouTube que tu veux afficher
+    iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Exemple de lien YouTube
+    modal.style.display = "flex"; // Afficher le modal
+});
+
+// Fermer le modal vidéo
+document.getElementById('closeModal').addEventListener('click', function() {
+    var modal = document.getElementById('videoModal');
+    var iframe = document.getElementById('videoIframe');
+    iframe.src = ""; // Supprime l'iframe pour arrêter la vidéo
+    modal.style.display = "none"; // Cacher le modal
+});
+
+// Fermer le modal si on clique en dehors de la zone de contenu
+window.onclick = function(event) {
+    var modal = document.getElementById('videoModal');
+    if (event.target == modal) {
+        var iframe = document.getElementById('videoIframe');
+        iframe.src = "";
+        modal.style.display = "none";
+    }
+}
+</script>
