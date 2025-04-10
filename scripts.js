@@ -27,7 +27,7 @@ document.getElementById('demoBtn').addEventListener('click', function() {
     var modal = document.getElementById('videoModal');
     var iframe = document.getElementById('videoIframe');
     // Remplace par l'URL de la vidéo YouTube que tu veux afficher
-    iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ"; // Exemple de lien YouTube
+    iframe.src = "https://www.youtube.com/watch?v=EottUVUXehw"; // Exemple de lien YouTube
     modal.style.display = "flex"; // Afficher le modal
 });
 
