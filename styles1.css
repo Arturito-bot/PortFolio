@@ -109,7 +109,7 @@ nav {
     margin: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
 }
 
 .feature-card h3 {
@@ -119,6 +119,7 @@ nav {
 
 .feature-card p {
     color: #666;
+    text-align:justify;
     line-height: 1.6;
 }
 
