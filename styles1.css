@@ -264,8 +264,8 @@ footer {
 
 .close {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 2px;
+    right: 3px;
     font-size: 30px;
     color: #333;
     cursor: pointer;
