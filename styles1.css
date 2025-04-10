@@ -138,7 +138,7 @@ nav {
 @media (min-width: 992px) {
     .feature-card {
         width: calc(40% - 40px);
-        height: 300px
+        height: 200px
     }
 }
 
