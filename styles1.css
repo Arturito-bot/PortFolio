@@ -121,7 +121,7 @@ nav {
 .feature-card p {
     color: #666;
     text-align:justify;
-    line-height: 1.6;
+    line-height: 2;
 }
 
 @media (min-width: 768px) {
