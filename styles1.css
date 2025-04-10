@@ -324,3 +324,11 @@ footer {
     color: #333;
     cursor: pointer;
 }
+.cta-section {
+    display: flex;
+    justify-content: center; /* Centre le bouton horizontalement */
+    align-items: center; /* Centre le bouton verticalement */
+    height: 100px; /* Ajuste la hauteur de la section */
+    text-align: center; /* Centre le texte dans la section */
+}
+
