@@ -18,28 +18,32 @@
     <section class="project-overview">
         <h1>Convertisseur Youtube Mp3/Mp4</h1>
         <p>Ce projet permet de convertir des vidéos YouTube en formats Mp3 ou Mp4, tout en évitant les publicités et les restrictions des sites de conversion en ligne.</p>
-        <div class="cta-section">
-            <button class="button">
-                Voir démonstration
-                <span class="button-span"> ─ Convertisseur Youtube</span>
-            </button>
-        </div>
     </section>
 
     <section class="features">
-        
         <div class="feature-card">
-            <h3>Caracteristiques </h3>
-            <p><li>Programmé en Python</li><br>
+            <h3>Caractéristiques</h3>
+            <p>
+                <li>Programmé en Python</li><br>
                 <li>Transformé en .exe pour une facilité d'exécution</li><br>
                 <li>Logo fait maison</li><br>
             </p>
         </div>
         <div class="feature-card">
             <h3>Avantages</h3>
-            <p><li>Évitez les interruptions causées par les publicités grâce à cette outil</li><br>
-                <li>Plus besoin de passer par des sites qui se font strikes et qui récuperent nos données perso.</li><br></p>
+            <p>
+                <li>Évitez les interruptions causées par les publicités grâce à cet outil</li><br>
+                <li>Plus besoin de passer par des sites qui se font strikes et qui récupèrent nos données perso.</li><br>
+            </p>
         </div>
+    </section>
+
+    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
+    <section class="cta-section">
+        <button class="button" id="openVideo">
+            Voir démonstration
+            <span class="button-span"> ─ Convertisseur Youtube</span>
+        </button>
     </section>
 
     <section class="feedback">
@@ -67,10 +71,31 @@
         <input type="checkbox" id="darkMode" name="darkMode">
     </div>
 
+    <!-- Popup Video -->
+    <div id="videoPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopup">&times;</span>
+            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
     <script>
         // Update the rating value dynamically
         document.getElementById('rating').addEventListener('input', function() {
             document.getElementById('rating-value').textContent = this.value;
+        });
+
+        // Open Video Popup
+        document.getElementById('openVideo').addEventListener('click', function() {
+            const videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ'; // Remplacer par l'URL de la vidéo de démonstration
+            document.getElementById('videoFrame').src = videoUrl;
+            document.getElementById('videoPopup').style.display = 'block';
+        });
+
+        // Close Video Popup
+        document.getElementById('closePopup').addEventListener('click', function() {
+            document.getElementById('videoFrame').src = '';
+            document.getElementById('videoPopup').style.display = 'none';
         });
     </script>
 </body>
