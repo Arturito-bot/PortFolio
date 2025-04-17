@@ -120,20 +120,20 @@
   </div>
 </section>
 
+<!-- Formulaire de contact -->
+<section id="formulaire" style="padding: 20px 20px; background-color: #f9f9f9;">
+  <form action="https://formsubmit.co/29b057f25b036b2178381a220b5965df" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+    <input type="email" name="email" placeholder="Votre adresse email" required class="input-field">
+    <textarea name="message" placeholder="Votre message" required class="input-field" style="height: 150px;"></textarea>
     
-    <form action="https://formsubmit.co/29b057f25b036b2178381a220b5965df" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
-        
-        <input type="email" name="email" placeholder="Votre adresse email" required class="input-field">
+    <!-- Supprimer le captcha -->
+    <input type="hidden" name="_captcha" value="false">
     
-        <textarea name="message" placeholder="Votre message" required class="input-field" style="height: 150px;"></textarea>
-    
-        <!-- Supprimer le captcha -->
-        <input type="hidden" name="_captcha" value="false">
-    
-        <button type="submit" class="submit-button">Envoyer</button>
-    </form>
+    <button type="submit" class="submit-button">Envoyer</button>
+  </form>
 </section>
 
+    
     <footer>
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
