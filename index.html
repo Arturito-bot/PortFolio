@@ -95,26 +95,22 @@
         </div>
     </section>
 
-    <section id="contact" style="padding: 50px 20px; background-color: #f9f9f9;">
-      <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Contacte-moi</h2>
-      
-      <form action="https://formsubmit.co/29b057f25b036b2178381a220b5965df" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
-        
-        <input type="email" name="email" placeholder="Votre adresse email" required style="padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px;">
+   <section id="contact" style="padding: 50px 20px; background-color: #f9f9f9;">
+    <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Contacte-moi</h2>
     
-        <textarea name="message" placeholder="Votre message" required style="padding: 10px; font-size: 1em; border: 1px solid #ccc; border-radius: 5px; height: 150px;"></textarea>
+    <form action="https://formsubmit.co/29b057f25b036b2178381a220b5965df" method="POST" style="max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 15px;">
+        
+        <input type="email" name="email" placeholder="Votre adresse email" required class="input-field">
+    
+        <textarea name="message" placeholder="Votre message" required class="input-field" style="height: 150px;"></textarea>
     
         <!-- Supprimer le captcha -->
         <input type="hidden" name="_captcha" value="false">
     
-        <!-- Redirection après envoi (à personnaliser ou à supprimer si inutile) -->
-        <!--*<input type="hidden" name="_next" value="https://ton-site.com/merci.html"-->
-    
-        <button type="submit" style="padding: 12px; background-color: #007BFF; color: white; font-size: 1em; border: none; border-radius: 5px; cursor: pointer;">
-          Envoyer
-        </button>
-      </form>
-    </section>
+        <button type="submit" class="submit-button">Envoyer</button>
+    </form>
+</section>
+
 
 
  <div>
