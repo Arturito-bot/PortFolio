@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet - Autoclicker</title>
     <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Optionnel : centrer la vidéo et l’adapter */
+        .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 700px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -32,18 +49,20 @@
         <div class="feature-card">
             <h3>Avantages</h3>
             <ul>
-                <li>Éviter d'être considéré "AFK", utile dans plusieurs utilisations</li>
-                <li>Des options qui permettent d'éviter d'être repéré par des anti-autoclickers</li>
-                <li>Interface graphique intégrée pour une utilisation facile et personnalisable</li>
+                <li>Éviter d'être considéré "AFK"</li>
+                <li>Des options qui permettent d'éviter d'être repéré</li>
+                <li>Interface graphique intégrée</li>
             </ul>
         </div>
     </section>
 
-    <section class="cta-section">
-        <button class="button" id="openVideo">
-            Voir démonstration
-            <span class="button-span"> ─ Autoclicker</span>
-        </button>
+    <!-- Vidéo visible directement -->
+    <section class="video-section">
+        <h2>Démo du projet</h2>
+        <video id="autoclickerVideo" muted controls preload="none">
+            <source src="../Video/demo_autoclicker.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
     </section>
 
     <section class="feedback">
@@ -64,45 +83,26 @@
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
 
-    <div id="loader" class="loader"></div>
-
-    <div class="toggle-switch">
-        <label for="darkMode">Mode sombre</label>
-        <input type="checkbox" id="darkMode" name="darkMode">
-    </div>
-
-    <!-- Popup Video -->
-    <div id="videoPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <video id="videoFrame" width="560" height="315" controls>
-                <source src="" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture vidéo.
-            </video>
-        </div>
-    </div>
-
     <script>
-        // Update the rating value dynamically
+        // Met à jour la valeur de la note dynamiquement
         document.getElementById('rating').addEventListener('input', function() {
             document.getElementById('rating-value').textContent = this.value;
         });
 
-        // Open Video Popup (vidéo locale)
-        document.getElementById('openVideo').addEventListener('click', function() {
-            const videoPath = '../Video/demo_autoclicker.mp4'; // remonte d'un dossier et va dans Video
-            const video = document.getElementById('videoFrame');
-            video.querySelector('source').src = videoPath;
-            video.load();
-            document.getElementById('videoPopup').style.display = 'flex';
-        });
+        // Auto-play / pause de la vidéo quand elle est visible
+        const video = document.getElementById('autoclickerVideo');
 
-        // Close Video Popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            const video = document.getElementById('videoFrame');
-            video.pause();
-            document.getElementById('videoPopup').style.display = 'none';
-        });
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    video.play(); // la vidéo devient visible → lecture
+                } else {
+                    video.pause(); // elle sort du champ → pause
+                }
+            });
+        }, { threshold: 0.5 }); // 50% visible pour déclencher
+
+        observer.observe(video);
     </script>
 </body>
 </html>
