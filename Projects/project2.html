@@ -90,7 +90,7 @@
 
         // Open Video Popup (vidéo locale)
         document.getElementById('openVideo').addEventListener('click', function() {
-            const videoPath = '/Video/demo_autoclicker.mp4'; // remonte d'un dossier et va dans Video
+            const videoPath = '../Video/demo_autoclicker.mp4'; // remonte d'un dossier et va dans Video
             const video = document.getElementById('videoFrame');
             video.querySelector('source').src = videoPath;
             video.load();
