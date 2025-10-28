@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <title>Projet - Autoclicker</title>
     <link rel="stylesheet" href="styles1.css">
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="../index.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="project-overview">
         <h1>Autoclicker</h1>
-        <p>Logiciel qui permet de simuler un click de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres</p>
+        <p>Logiciel qui permet de simuler un clic de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres.</p>
     </section>
 
     <section class="features">
@@ -32,18 +32,17 @@
         <div class="feature-card">
             <h3>Avantages</h3>
             <ul>
-                <li>Eviter d'être considéré "AFK", utile dans plusieurs utilisations, pro ou loisir</li>
+                <li>Éviter d'être considéré "AFK", utile dans plusieurs utilisations</li>
                 <li>Des options qui permettent d'éviter d'être repéré par des anti-autoclickers</li>
-                <li>Interface graphique intégrée permettant une facilité d'utilisation et de personnalisation</li>
+                <li>Interface graphique intégrée pour une utilisation facile et personnalisable</li>
             </ul>
         </div>
     </section>
 
-    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
     <section class="cta-section">
         <button class="button" id="openVideo">
             Voir démonstration
-            <span class="button-span"> ─ Convertisseur Youtube</span>
+            <span class="button-span"> ─ Autoclicker</span>
         </button>
     </section>
 
@@ -91,7 +90,7 @@
 
         // Open Video Popup (vidéo locale)
         document.getElementById('openVideo').addEventListener('click', function() {
-            const videoPath = '../Video/demo_autoclicker.mp4'; // chemin vers ta vidéo locale
+            const videoPath = '../Video/demo_autoclicker.mp4'; // remonte d'un dossier et va dans Video
             const video = document.getElementById('videoFrame');
             video.querySelector('source').src = videoPath;
             video.load();
