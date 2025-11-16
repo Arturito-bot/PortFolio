@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #eaeaea;
     color: #333;
     overflow-x: hidden; /* Empêche le défilement horizontal */
 }
@@ -114,7 +114,7 @@ nav {
 
 .feature-card p {
     color: #666;
-    text-align:justify;
+    text-align: left;
     line-height: 2;
 }
 
@@ -134,7 +134,7 @@ nav {
 @media (min-width: 992px) {
     .feature-card {
         width: calc(40% - 40px);
-        height: 200px;
+        
     }
 }
 
@@ -292,4 +292,46 @@ footer {
 .cta-section {
     text-align: center; /* Centre le contenu horizontalement */
     padding: 20px;
+}
+/* =====================================================
+   STYLES COMMUNS (pour centrage et pilules)
+=====================================================
+*/
+
+/* --- Conteneur pour centrer les boutons GitHub --- */
+.button-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+/* --- Conteneur pour centrer les pilules --- */
+.tech-pills {
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Style de base des pilules (la forme) --- */
+.tech-pills span {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 5px 12px;
+    border-radius: 15px; /* C'est ça qui fait la pilule */
+    font-size: 0.9em;
+    font-weight: 600;
+    margin: 5px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+/* =====================================================
+   STYLE POUR CONTENEUR PDF / CV
+=====================================================
+*/
+
+.pdf-container,
+.cv-container {
+    display: flex;
+    flex-direction: column; /* Empile les éléments (PDF en haut, bouton en bas) */
+    align-items: center;   /* Centre le tout horizontalement */
+    gap: 15px;             /* Ajoute de l'espace entre le PDF et le bouton */
+    margin-top: 20px;
 }

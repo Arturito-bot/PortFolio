@@ -1,0 +1,388 @@
+/* =====================================================
+   FICHIER D'IDENTITÉ DES PROJETS (project-identities.css)
+=====================================================
+*/
+
+/* ---------------------------------------------
+   VARIABLES DE COULEUR (pour un contrôle facile)
+---------------------------------------------
+*/
+:root {
+    --youtube-red: #c4302b;
+    
+    --autoclicker-green-neon: #00e573;
+    --autoclicker-green-darker: #00a85e;
+    
+    --drone-blue: #0076a8;
+    --drone-dark-bg: #0a111a;
+    --drone-line-color: #00b0ff;
+    
+    --sudoku-green: #27ae60;
+    --sudoku-dark: #34495e;
+    
+    --rocket-orange: #f39c12;
+    --rocket-bg: #1a1a2e;
+    
+    --argos-cyan: #1f8fa6;
+    --argos-bg: #0f0f1a;
+}
+
+/* =====================================================
+   PROJET 1 : CONVERTISSEUR YOUTUBE (Dégradé Animé)
+=====================================================
+*/
+
+@keyframes pulseGradient {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.project-hero-youtube {
+    background: linear-gradient(-45deg, #111, #333, var(--youtube-red), #111);
+    background-size: 400% 400%;
+    animation: pulseGradient 15s ease infinite;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.project-hero-youtube .hero-content { position: relative; z-index: 2; }
+.project-hero-youtube h1 {
+    font-size: 3.0em;
+    color: var(--youtube-red);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+.project-hero-youtube .hero-subtitle {
+    font-size: 1.2em;
+    color: #eee;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+.project-hero-youtube .hero-credits {
+    font-style: italic;
+    color: #ccc;
+}
+.button-youtube {
+    background-color: var(--youtube-red);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.button-youtube:hover {
+    background-color: #a0201a;
+    transform: translateY(-2px);
+}
+.features-youtube h3, .details-youtube h3, .tech-youtube h2 {
+    color: var(--youtube-red);
+}
+.tech-youtube .tech-main {
+    background-color: var(--youtube-red);
+    color: white;
+}
+
+
+/* =====================================================
+   PROJET 2 : AUTOCLICKER (Motif Curseur SVG)
+=====================================================
+*/
+
+.project-hero-autoclicker {
+    background-image: 
+        linear-gradient(rgba(17, 17, 17, 0.9), rgba(17, 17, 17, 0.9)), /* Voile */
+        url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23ccc' stroke='%23111' stroke-width='1' viewBox='0 0 16 16'%3E%3Cpath d='M14.082 2.182a.5.5 0 0 1 .103.557L8.528 15.467a.5.5 0 0 1-.917-.007L5.57 10.694.803 8.652a.5.5 0 0 1-.006-.916l12.728-5.657a.5.5 0 0 1 .556.103z'/%3E%3C/svg%3E"); /* Curseur */
+    background-color: #111;
+    background-size: auto, 50px;
+    background-position: 0 0, 25px 25px;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+.project-hero-autoclicker .hero-content { position: relative; z-index: 2; }
+.project-hero-autoclicker h1 {
+    font-size: 3.0em; 
+    color: var(--autoclicker-green-neon); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+.project-hero-autoclicker .hero-subtitle {
+    font-size: 1.2em;
+    color: #eee;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.button-autoclicker {
+    background-color: var(--autoclicker-green-neon); 
+    color: #111;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.button-autoclicker:hover {
+    background-color: #00c25f; 
+    transform: translateY(-2px);
+    color: #000;
+}
+.features-autoclicker h3, .details-autoclicker h3, .tech-autoclicker h2 {
+    color: var(--autoclicker-green-darker); 
+}
+.tech-autoclicker .tech-main {
+    background-color: var(--autoclicker-green-darker); 
+    color: white; 
+}
+
+
+/* =====================================================
+   PROJET 3 : DRONE (Animation Circuit)
+=====================================================
+*/
+
+@keyframes circuitFade {
+    0%, 100% { opacity: 0; }
+    25% { opacity: 0.2; }
+    75% { opacity: 0.2; }
+}
+@keyframes circuitPan {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.project-hero-drone {
+    background-color: var(--drone-dark-bg);
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+.project-hero-drone::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8bGluZSB4MT0iMCIgeTE9IjAiIHgyPSIxMDAiIHkyPSIxMDAiIHN0cm9rZT0iIzAwYjBmZiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjMiIC8+CiAgPGxpbmUgeDE9IjEwMCIgeTE9IjAiIHgyPSIwIiB5Mj0iMTAwIiBzdHJva2U9IiMwMGIwZmYiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC4zIiAvPgogIDxsaW5lIHgxPSIwIiB5MT0iNTAiIHgyPSI1MCIgeTI9IjAiIHN0cm9rZT0iIzAwYjBmZiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjMiIC8+CiAgPGxpbmUgeDE9IjUwIiB5MT0iMTAwIiB4Mj0iMTAwIiB5Mj0iNTAiIHN0cm9rZT0iIzAwYjBmZiIgc3Ryb2tlLXdpZHRoPSIxIiBvcGFjaXR5PSIwLjMiIC8+Cjwvc3ZnPg==");
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    animation: circuitFade 6s ease-in-out infinite, circuitPan 20s linear infinite;
+    z-index: 1;
+}
+.project-hero-drone .hero-content { position: relative; z-index: 2; }
+.project-hero-drone h1 {
+    font-size: 3.0em; 
+    color: var(--drone-blue);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+.project-hero-drone .hero-subtitle {
+    font-size: 1.2em;
+    color: #eee;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+.project-hero-drone .hero-credits {
+    font-style: italic;
+    color: #aaa;
+}
+.button-drone {
+    background-color: var(--drone-blue);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.button-drone:hover {
+    background-color: #005a80; 
+    transform: translateY(-2px);
+}
+.features-drone h3, .details-drone h3, .docs-drone h2, .tech-drone h2 { 
+    color: var(--drone-blue);
+}
+.tech-drone .tech-main {
+    background-color: var(--drone-blue);
+    color: white;
+}
+
+
+/* =====================================================
+   PROJET 4 : SUDOKU (Motif Grille)
+=====================================================
+*/
+
+.project-hero-sudoku {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Cpath d='M0 1px H90 M1px 0 V90 M0 30px H90 M30px 0 V90 M60px 0 V90 M0 60px H90' stroke='%2334495e' stroke-width='0.5' fill='none' opacity='0.3'/%3E%3Cpath d='M0 3px H90 M3px 0 V90 M90 2.5 H0 M2.5 90 V0 M0 30px H90 M30px 0 V90 M60px 0 V90 M0 60px H90' stroke='%2334495e' stroke-width='1.5' fill='none' opacity='0.5'/%3E%3C/svg%3E");
+    background-color: #fff;
+    background-size: auto, 90px;
+    border-bottom: 1px solid #eee;
+    padding: 60px 20px;
+    text-align: center;
+    color: var(--sudoku-dark);
+    position: relative;
+    overflow: hidden;
+}
+.project-hero-sudoku .hero-content { position: relative; z-index: 2; }
+.project-hero-sudoku h1 {
+    font-size: 3.0em; 
+    color: var(--sudoku-green); 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+}
+.project-hero-sudoku .hero-subtitle {
+    font-size: 1.2em;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.button-sudoku {
+    background-color: var(--sudoku-green); 
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.button-sudoku:hover {
+    background-color: #218c4b; 
+    transform: translateY(-2px);
+}
+.features-sudoku h3, .details-sudoku h3, .tech-sudoku h2 { 
+    color: var(--sudoku-green); 
+}
+.tech-sudoku .tech-main {
+    background-color: var(--sudoku-green); 
+    color: white; 
+}
+
+/* =====================================================
+   PROJET 5 : FUSÉE (Animation Télémétrie)
+=====================================================
+*/
+
+@keyframes telemetryScroll {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 -200px; } /* Défilement vertical */
+}
+
+.project-hero-rocket {
+    background-color: var(--rocket-bg);
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+.project-hero-rocket::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    /* Motif de lignes horizontales qui défilent */
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 100% 10px; /* Espace de 10px entre les lignes */
+    animation: telemetryScroll 5s linear infinite;
+    z-index: 1;
+    opacity: 0.5;
+}
+.project-hero-rocket .hero-content { position: relative; z-index: 2; }
+.project-hero-rocket h1 {
+    font-size: 3.0em; 
+    color: var(--rocket-orange); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+.project-hero-rocket .hero-subtitle {
+    font-size: 1.2em;
+    color: #eee;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.button-rocket {
+    background-color: var(--rocket-orange); 
+    color: #111;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.button-rocket:hover {
+    background-color: #d48c0b; 
+    transform: translateY(-2px);
+}
+.features-rocket h3, .details-rocket h3, .tech-rocket h2 { 
+    color: var(--rocket-orange); 
+}
+.tech-rocket .tech-main {
+    background-color: var(--rocket-orange); 
+    color: #111; 
+}
+
+
+/* =====================================================
+   PROJET 6 : ARGOS (Pulse "Respiration")
+=====================================================
+*/
+
+@keyframes smoothPulse {
+    0% { opacity: 0; transform: scale(0.5); }
+    40% { opacity: 0; transform: scale(0.5); }
+    80% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+.project-hero-argos {
+    background-color: var(--argos-bg);
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+.project-hero-argos::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(circle at center, var(--argos-cyan) 0%, rgba(0, 212, 255, 0) 70%);
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0; 
+    transform: scale(0.5); 
+    animation: smoothPulse 5s ease-in-out infinite;
+    z-index: 1;
+}
+.project-hero-argos::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: linear-gradient(to bottom, var(--argos-bg) 0%, rgba(15,15,26,0) 25%, rgba(15,15,26,0) 75%, var(--argos-bg) 100%);
+    z-index: 2;
+}
+.project-hero-argos .hero-content { position: relative; z-index: 3; }
+.project-hero-argos h1 {
+    font-size: 3.0em; 
+    color: var(--argos-cyan); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+.project-hero-argos .hero-subtitle {
+    font-size: 1.2em;
+    color: #eee;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.button-argos {
+    background-color: var(--argos-cyan); 
+    color: #111;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.button-argos:hover {
+    background-color: #0c647a; 
+    transform: translateY(-2px);
+}
+.features-argos h3, .details-argos h3, .tech-argos h2 { 
+    color: var(--argos-cyan); 
+}
+.tech-argos .tech-main {
+    background-color: var(--argos-cyan); 
+    color: #111; 
+}

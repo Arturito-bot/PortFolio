@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <title>Projet - Télémétrie Mini-Fusée</title>
+    
     <link rel="stylesheet" href="styles1.css">
+    
+    <link rel="stylesheet" href="project-identities.css">
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="../index.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="project-overview">
-        <h1>Autoclicker</h1>
-        <p>Logiciel qui permet de simuler un click de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres</p>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Caractéristiques</h3>
-            <ul>
-                <li>Programmé en Python</li>
-                <li>Transformé en .exe pour une facilité d'exécution</li>
-                <li>Logo fait maison</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Avantages</h3>
-            <ul>
-                <li>Eviter d'être considérer "AFK", utile dans plusieurs utilisations, pro ou loisir</li>
-                <li>A des options qui permettant d'éviter d'être repéré par des anti-autoclickers</li>
-                <li>Interface graphique intégré permettant une facilité d'utiliation et de personalisation</li>
-            </ul>
+    <section class="project-hero-rocket">
+        <div class="hero-content">
+            <h1>Système Embarqué pour Mini-Fusée</h1>
+            <p class="hero-subtitle">
+                Implémentation d'un système embarqué de télémétrie pour l'acquisition et la transmission en temps réel des performances d'une fusée miniature.
+            </p>
         </div>
     </section>
 
-    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
-    <section class="cta-section">
-        <button class="button" id="openVideo">
-            Voir démonstration
-            <span class="button-span"> ─ Convertisseur Youtube</span>
-        </button>
+    <div class="button-container">
+        <a href="https://github.com/ton-pseudo/rocket-telemetry" target="_blank" class="button button-rocket">
+            Voir le code sur GitHub
+        </a>
+    </div>
+
+    <section class="tech-stack tech-rocket" style="padding: 30px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies & Matériel</h2>
+        <div class="tech-pills">
+            <span class="tech-main">C++ / Arduino</span>
+            <span class="tech-main">Capteurs (MPU6050)</span>
+            <span>Baromètre (BMP280)</span>
+            <span class="tech-main">Module RF (LoRa)</span>
+            <span>Conception PCB (KiCad)</span>
+            <span>Soudure</span>
+        </div>
     </section>
 
-  
+    <section class="features features-rocket" style="padding: 40px 20px;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Architecture du Système</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>1. Acquisition de Données (Vol)</h3>
+                <p>Le cœur de la fusée est un microcontrôleur (ex: Arduino Nano) qui lit les données d'une centrale inertielle (MPU6050) pour l'accélération et l'orientation, et d'un baromètre (BMP280) pour l'altitude.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>2. Transmission RF (Télémétrie)</h3>
+                <p>Les données collectées sont formatées et envoyées en temps réel vers le sol via un module de communication longue portée (ex: LoRa ou XBee), permettant un suivi en direct de la trajectoire et de l'apogée.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>3. Station au Sol & Visualisation</h3>
+                <p>Une station de réception au sol (un autre module RF connecté à un PC) reçoit les paquets de données, les décode et les affiche sur une interface simple (ex: GUI en Python ou moniteur série) pour analyse post-vol.</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="project-docs docs-rocket" style="background-color: #f9f9f9; text-align: center; padding-bottom: 40px;">
+        <h2 style="text-align: center; width: 100%;">Schéma du Système Embarqué</h2>
+        <p style="text-align: center;">Photo du prototype ou schéma de la carte de vol.</p>
+        <div style="padding: 20px;">
+            <img src="../Docs/schema_fusee.png" alt="Schéma du système embarqué" style="max-width: 80%; width: 600px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
 
-    <div id="loader" class="loader"></div>
-
-    <div class="toggle-switch">
-        <label for="darkMode">Mode sombre</label>
-        <input type="checkbox" id="darkMode" name="darkMode">
-    </div>
-
-    <!-- Popup Video -->
-    <div id="videoPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script>
-        // Update the rating value dynamically
-        document.getElementById('rating').addEventListener('input', function() {
-            document.getElementById('rating-value').textContent = this.value;
-        });
-
-        // Open Video Popup
-        document.getElementById('openVideo').addEventListener('click', function() {
-            const videoUrl = 'https://www.youtube.com/embed/EottUVUXehw'; // Remplacer par l'URL de la vidéo de démonstration
-            document.getElementById('videoFrame').src = videoUrl;
-            document.getElementById('videoPopup').style.display = 'flex';
-        });
-
-        // Close Video Popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            document.getElementById('videoFrame').src = '';
-            document.getElementById('videoPopup').style.display = 'none';
-        });
-    </script>
 </body>
 </html>

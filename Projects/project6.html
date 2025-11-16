@@ -3,88 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <title>Projet - Argos (Automatisation Visuelle)</title>
+    
     <link rel="stylesheet" href="styles1.css">
+    
+    <link rel="stylesheet" href="project-identities.css">
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="../index.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="project-overview">
-        <h1>Autoclicker</h1>
-        <p>Logiciel qui permet de simuler un click de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres</p>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Caractéristiques</h3>
-            <ul>
-                <li>Programmé en Python</li>
-                <li>Transformé en .exe pour une facilité d'exécution</li>
-                <li>Logo fait maison</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Avantages</h3>
-            <ul>
-                <li>Eviter d'être considérer "AFK", utile dans plusieurs utilisations, pro ou loisir</li>
-                <li>A des options qui permettant d'éviter d'être repéré par des anti-autoclickers</li>
-                <li>Interface graphique intégré permettant une facilité d'utiliation et de personalisation</li>
-            </ul>
+    <section class="project-hero-argos">
+        <div class="hero-content">
+            <h1>Argos : Outil d'Automatisation Visuelle Multi-Profils</h1>
+            <p class="hero-subtitle">
+                Un utilitaire d'automatisation en Python conçu pour surveiller plusieurs zones de l'écran et déclencher des actions (clavier/souris) en réponse à des changements visuels.
+            </p>
         </div>
     </section>
 
-    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
-    <section class="cta-section">
-        <button class="button" id="openVideo">
-            Voir démonstration
-            <span class="button-span"> ─ Convertisseur Youtube</span>
-        </button>
+    <section class="video-section" style="display: flex; flex-direction: column; align-items: center; margin: 40px 0;">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">Démo de l'Interface</h2>
+        <video id="demoVideo" muted controls loop preload="none" style="width: 80%; max-width: 700px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            <source src="../Video/demo_argos.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
     </section>
 
-  
+    <div class="button-container">
+        <a href="https://github.com/ton-pseudo/argos-project" target="_blank" class="button button-argos">
+            Voir le code sur GitHub
+        </a>
+    </div>
+
+    <section class="tech-stack tech-argos" style="padding: 30px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies Utilisées</h2>
+        <div class="tech-pills">
+            <span class="tech-main">Python</span>
+            <span class="tech-main">OpenCV</span>
+            <span class="tech-main">Tkinter</span>
+            <span>Threading</span>
+            <span class="tech-main">mss (Capture)</span>
+            <span>PyAutoGUI</span>
+        </div>
+    </section>
+
+    <section class="features features-argos" style="padding: 40px 20px;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Fonctionnalités Principales</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Gestion de Profils Multi-Zones</h3>
+                <p>Le cœur du système. Chaque profil est une zone de détection indépendante. L'utilisateur peut en créer et configurer autant que nécessaire pour surveiller plusieurs points de l'écran simultanément.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Configuration en Temps Réel</h3>
+                <p>Une fenêtre de visualisation (OpenCV) permet de positionner et redimensionner la zone de détection au pixel près. La zone de capture se centre dynamiquement sur la zone de travail pour une configuration aisée.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Réglages Fins par Profil</h3>
+                <p>Chaque profil possède ses propres paramètres : action (touche clavier ou clic), seuil de sensibilité (Delta), et mode de déclenchement (continu ou "one-shot" pour une action unique).</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="project-details details-argos" style="padding: 40px 20px; background-color: #f9f9f9;">
+        
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Architecture et Défis Techniques</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 1 : Latence de Capture</h3>
+                <p><strong>Problème :</strong> `pyautogui.screenshot()` était un goulot d'étranglement, trop lent pour une détection réactive.</p>
+                <p><strong>Solution :</strong> Intégration de `mss` (Monitor Screen Shot), qui utilise les API natives du système pour des captures ultra-rapides, réduisant drastiquement la latence.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 2 : GUI non réactif</h3>
+                <p><strong>Problème :</strong> Une boucle de détection intensive ("worker") dans le thread principal gèlerait l'interface Tkinter.</p>
+                <p><strong>Solution :</strong> Architecture Multi-Thread. Le Thread Principal gère la GUI (Tkinter) et les configs. Un Thread Secondaire ("worker") gère 100% des opérations coûteuses.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 3 : Sécurité des Threads</h3>
+                <p><strong>Problème :</strong> Le "worker" ne peut pas modifier la GUI Tkinter directement sans risque de conflits ("race conditions").</p>
+                <p><strong>Solution :</strong> Les mises à jour de la GUI (ex: passage en pause) sont postées de manière sécurisée sur le thread principal via `root.after()`.</p>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
 
-    <div id="loader" class="loader"></div>
-
-    <div class="toggle-switch">
-        <label for="darkMode">Mode sombre</label>
-        <input type="checkbox" id="darkMode" name="darkMode">
-    </div>
-
-    <!-- Popup Video -->
-    <div id="videoPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
     <script>
-        // Update the rating value dynamically
-        document.getElementById('rating').addEventListener('input', function() {
-            document.getElementById('rating-value').textContent = this.value;
-        });
+        // Intersection Observer pour lancer la vidéo au scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const video = document.getElementById("demoVideo");
 
-        // Open Video Popup
-        document.getElementById('openVideo').addEventListener('click', function() {
-            const videoUrl = 'https://www.youtube.com/embed/EottUVUXehw'; // Remplacer par l'URL de la vidéo de démonstration
-            document.getElementById('videoFrame').src = videoUrl;
-            document.getElementById('videoPopup').style.display = 'flex';
-        });
-
-        // Close Video Popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            document.getElementById('videoFrame').src = '';
-            document.getElementById('videoPopup').style.display = 'none';
+            if (video) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            video.play();
+                        } else {
+                            video.pause();
+                        }
+                    });
+                }, { threshold: 0.5 });
+                observer.observe(video);
+            }
         });
     </script>
 </body>

@@ -3,100 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <title>Projet - Convertisseur MPro3</title>
+    
     <link rel="stylesheet" href="styles1.css">
+    
+    <link rel="stylesheet" href="project-identities.css">
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="../index.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="project-overview">
-        <h1>Convertisseur Youtube Mp3/Mp4</h1>
-        <p>Ce projet permet de convertir des vidéos YouTube en formats Mp3 ou Mp4, tout en évitant les publicités et les restrictions des sites de conversion en ligne.</p>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Caractéristiques</h3>
-            <ul>
-                <li>Programmé en Python</li>
-                <li>Transformé en .exe pour une facilité d'exécution</li>
-                <li>Logo fait maison</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Avantages</h3>
-            <ul>
-                <li>Évitez les interruptions causées par les publicités grâce à cet outil</li>
-                <li>Plus besoin de passer par des sites qui se font strikes et qui récupèrent nos données perso.</li>
-            </ul>
+    <section class="project-hero-youtube">
+        <div class="hero-content">
+            <h1>MPro3 : Convertisseur Youtube MP3/MP4</h1>
+            <p class="hero-subtitle">
+                Une application de bureau Python développée en collaboration avec Côme NZUZI MANIEMA. Elle offre une interface graphique simple et moderne pour télécharger des vidéos YouTube en format MP3 (audio) ou MP4 (vidéo 720p).
+            </p>
+            <p class="hero-credits">
+                "Auteurs : Côme NZUZI MANIEMA et Arthur dit 'Mignon Garçon' WESTPHAL, pour la culture."
+            </p>
         </div>
     </section>
-
-    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
-    <section class="cta-section">
-        <button class="button" id="openVideo">
-            Voir démonstration
-            <span class="button-span"> ─ Convertisseur Youtube</span>
-        </button>
+    
+    <section class="video-section" style="display: flex; flex-direction: column; align-items: center; margin: 40px 0;">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">Démo du projet</h2>
+        <video id="convertisseurVideo" muted controls loop preload="none" style="width: 80%; max-width: 700px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+            <source src="../Video/demo_convertisseur.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture vidéo.
+        </video>
     </section>
 
-    <section class="feedback">
-        <h2>Donnez votre avis</h2>
-        <form>
-            <label for="rating">Évaluez le projet :</label>
-            <input type="range" id="rating" name="rating" min="1" max="5" value="3">
-            <span>Note: <span id="rating-value">3</span></span>
+    <div class="button-container">
+        <a href="https://github.com/ton-pseudo/MPro3-project" target="_blank" class="button button-youtube">
+            Voir le code sur GitHub
+        </a>
+    </div>
 
-            <label for="comment">Votre commentaire :</label>
-            <textarea id="comment" name="comment" placeholder="Votre avis sur ce projet" rows="4"></textarea>
+    <section class="tech-stack tech-youtube" style="padding: 30px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies Utilisées</h2>
+        <div class="tech-pills">
+            <span class="tech-main">Python</span>
+            <span>Tkinter</span>
+            <span>ttkbootstrap</span>
+            <span>Threading</span>
+            <span class="tech-main">yt-dlp</span>
+            <span class="tech-main">FFmpeg</span>
+            <span>MoviePy</span>
+        </div>
+    </section>
 
-            <button type="submit" class="button">Envoyer</button>
-        </form>
+    <section class="features features-youtube" style="padding: 40px 20px;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Fonctionnalités Clés</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Téléchargement Efficace</h3>
+                <p>Utilise <strong>yt-dlp</strong> (successeur de youtube-dl) pour extraire les flux. Le MP3 est obtenu via un post-processeur FFmpeg et le MP4 est mergé en 720p maximum pour un équilibre poids/qualité.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Interface Moderne</h3>
+                <p>Interface construite avec Tkinter mais modernisée grâce à <strong>ttkbootstrap</strong> (thème "darkly"). Inclut une barre de progression en temps réel et des labels de statut clairs pour l'utilisateur.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Expérience Utilisateur (UX)</h3>
+                <p>Récupère le titre original de la vidéo (via <strong>get_video_title</strong>) dès que l'utilisateur clique hors du champ URL. Permet un titre personnalisé et nettoie les noms de fichiers (`sanitize_filename`).</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="project-details details-youtube" style="padding: 40px 20px; background-color: #f9f9f9;">
+        
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Architecture et Défis Techniques</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 1 : Interface "Gelée" (Freeze)</h3>
+                <p><strong>Problème :</strong> Le téléchargement et la conversion sont des opérations I/O longues. Lancées sur le thread principal, elles "gèlent" l'interface Tkinter, la rendant non réactive.</p>
+                <p><strong>Solution :</strong> Architecture Multi-Thread. Le téléchargement (`run_download`) est lancé dans un <strong>thread "worker"</strong> (`threading.Thread`) séparé, laissant le thread principal 100% disponible pour la GUI.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 2 : Mises à Jour "Thread-Safe"</h3>
+                <p><strong>Problème :</strong> Mettre à jour un widget Tkinter (comme la barre de progression) depuis un thread secondaire cause des bugs et des crashs (non "thread-safe").</p>
+                <p><strong>Solution :</strong> Utilisation de <strong>`root.after(0, ...)`</strong>. Le "worker thread" n'update pas la GUI directement ; il poste un message dans la file d'attente de Tkinter, qui l'exécute de manière sécurisée sur le thread principal.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 3 : "Bruit" des Bibliothèques</h3>
+                <p><strong>Problème :</strong> `yt-dlp` et `moviepy`/`ffmpeg` sont très "bavards" et impriment des tonnes d'informations dans la console, ce qui n'est pas propre pour une application finale.</p>
+                <p><strong>Solution :</strong> Redirection de la sortie standard. `stdout` et `stderr` sont redirigés vers `StringIO()` (un "puits" en mémoire) pendant les appels critiques pour une exécution totalement silencieuse.</p>
+            </div>
+
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
 
-    <div id="loader" class="loader"></div>
-
-    <div class="toggle-switch">
-        <label for="darkMode">Mode sombre</label>
-        <input type="checkbox" id="darkMode" name="darkMode">
-    </div>
-
-    <!-- Popup Video -->
-    <div id="videoPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
     <script>
-        // Update the rating value dynamically
-        document.getElementById('rating').addEventListener('input', function() {
-            document.getElementById('rating-value').textContent = this.value;
-        });
+        const video = document.getElementById('convertisseurVideo');
 
-        // Open Video Popup
-        document.getElementById('openVideo').addEventListener('click', function() {
-            const videoUrl = 'https://www.youtube.com/embed/EottUVUXehw'; // Remplacer par l'URL de la vidéo de démonstration
-            document.getElementById('videoFrame').src = videoUrl;
-            document.getElementById('videoPopup').style.display = 'flex';
-        });
+        if (video) { 
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 }); 
 
-        // Close Video Popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            document.getElementById('videoFrame').src = '';
-            document.getElementById('videoPopup').style.display = 'none';
-        });
+            observer.observe(video);
+        }
     </script>
 </body>
 </html>

@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #eaeaea;
     color: #333;
     overflow-x: hidden; /* Empêche le défilement horizontal */
 }
@@ -23,11 +23,12 @@ header {
 nav {
     position: sticky;
     top: 0;
-    background-color: #151515;  /* Couleur de fond pour la barre de navigation */
-    z-index: 1000;  /* Pour que la barre soit au-dessus des autres éléments */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Ombre pour une meilleure visibilité */
-    padding: 10px 20px;  /* Ajouter un peu de padding pour la mise en forme */
-    width: 100%;  /* Assurer que la nav prenne toute la largeur */
+    background-color: #151515;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box; /* <-- AJOUTE CETTE LIGNE */
 }
 
 /* Pour s'assurer que le nom n'est pas sticky et reste en haut */
@@ -88,7 +89,7 @@ nav ul li a:hover {
     flex-direction: column; /* Organisation en colonne */
     justify-content: center; /* Centrage vertical */
 }
-}
+
 
 .cv-preview {
     flex: 1;
@@ -311,7 +312,7 @@ footer {
   width: 0%;
   opacity: 0;
   color: white;
-  font-size: 1.2em;
+  font-size: 0.8em;
   font-weight: 600;
   transition-duration: 0.3s;
 }

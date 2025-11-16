@@ -3,89 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <title>Projet - Résolution de Sudoku</title>
+    
     <link rel="stylesheet" href="styles1.css">
+    
+    <link rel="stylesheet" href="project-identities.css">
+
+    <style>
+        .feature-card img.sudoku-step {
+            width: 100%;
+            height: 250px; /* Hauteur fixe pour aligner les cartes */
+            object-fit: contain; /* Assure que l'image rentre sans être déformée */
+            border-radius: 8px;
+            background-color: #f0f0f0; /* Fond pour les images */
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="../index.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="project-overview">
-        <h1>Autoclicker</h1>
-        <p>Logiciel qui permet de simuler un click de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres</p>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Caractéristiques</h3>
-            <ul>
-                <li>Programmé en Python</li>
-                <li>Transformé en .exe pour une facilité d'exécution</li>
-                <li>Logo fait maison</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Avantages</h3>
-            <ul>
-                <li>Eviter d'être considérer "AFK", utile dans plusieurs utilisations, pro ou loisir</li>
-                <li>A des options qui permettant d'éviter d'être repéré par des anti-autoclickers</li>
-                <li>Interface graphique intégré permettant une facilité d'utiliation et de personalisation</li>
-            </ul>
+    <section class="project-hero-sudoku">
+        <div class="hero-content">
+            <h1>Solveur de Sudoku par Vision</h1>
+            <p class="hero-subtitle">
+                Un programme Python qui analyse une image de grille de Sudoku, reconnaît les chiffres présents, et la résout en un temps record grâce à un algorithme de backtracking.
+            </p>
         </div>
     </section>
 
-    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
-    <section class="cta-section">
-        <button class="button" id="openVideo">
-            Voir démonstration
-            <span class="button-span"> ─ Convertisseur Youtube</span>
-        </button>
+    <div class="button-container">
+        <a href="https://github.com/ton-pseudo/sudoku-solver" target="_blank" class="button button-sudoku">
+            Voir le code sur GitHub
+        </a>
+    </div>
+
+    <section class="tech-stack tech-sudoku" style="padding: 30px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies Utilisées</h2>
+        <div class="tech-pills">
+            <span class="tech-main">Python</span>
+            <span class="tech-main">OpenCV</span>
+            <span class="tech-main">Tesseract (OCR)</span>
+            <span>Numpy</span>
+            <span>Tkinter</span>
+            <span>ttkbootstrap</span>
+        </div>
     </section>
 
-  
+    <section class="features features-sudoku" style="padding: 40px 20px;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Comment ça marche ?</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>1. Détection de la Grille</h3>
+                <img src="../Docs/sudoku.png" alt="Sudoku non résolu" class="sudoku-step">
+                <p>Le programme analyse l'image d'entrée (via OpenCV) pour détecter et isoler la grille grâce au traitement d'image (seuillage, contours, transformation de perspective).</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>2. Interface & OCR</h3>
+                <img src="../Docs/Sudokumenu.png" alt="Menu du solveur" class="sudoku-step">
+                <p>L'interface (Tkinter) affiche la grille isolée. L'utilisateur peut lancer la reconnaissance des chiffres (OCR) et la résolution via le bouton "Solve".</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>3. Résolution & Résultat</h3>
+                <img src="../Docs/SudokuSoluce.png" alt="Sudoku résolu" class="sudoku-step">
+                <p>Un algorithme de <strong>backtracking</strong> résout la grille. La solution est ensuite réinscrite sur l'image d'origine pour un résultat visuel immédiat.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="project-details details-sudoku" style="padding: 40px 20px; background-color: #f9f9f9;">
+        
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Plongée Technique : Du Pixel à la Solution</h2>
+        
+        <div class="single-text-block" style="max-width: 800px; margin: 0 auto; text-align: justify; line-height: 1.7;">
+            
+            <h3 style="text-align: left; margin-top: 10px;">Phase 1 : Vision par Ordinateur (OpenCV)</h3>
+            <p>La première étape est de "voir" la grille. Le script utilise <strong>OpenCV</strong> pour appliquer un filtre de <strong>Seuillage Adaptatif</strong> (`adaptiveThreshold`). C'est un filtre qui transforme l'image en noir et blanc pur, même si l'éclairage n'est pas uniforme (par exemple, une ombre sur un coin du papier). Ensuite, il trouve le plus grand carré de l'image (le contour de la grille) et utilise une <strong>Transformation de Perspective</strong> (`getPerspectiveTransform`). C'est une opération mathématique qui "redresse" l'image, comme si on la regardait parfaitement d'en haut, annulant tout angle de prise de vue.</p>
+
+            <h3 style="text-align: left; margin-top: 25px;">Phase 2 : Lecture de Chiffres (OCR)</h3>
+            <p>Une fois la grille redressée, il faut lire les chiffres. C'est le rôle de <strong>Tesseract (OCR)</strong>. Le script découpe la grille en 81 cases et envoie chaque case à Tesseract. Pour l'aider, on lui donne des ordres : `tessedit_char_whitelist=123456789` (pour lui dire de n'attendre que des chiffres de 1 à 9, et ignorer les lettres) et `--psm 8` (pour lui dire de traiter l'image comme un seul chiffre). Comme l'OCR n'est jamais parfait, une interface <strong>Tkinter</strong> s'ouvre pour permettre à l'utilisateur de valider et corriger manuellement les chiffres détectés.</p>
+
+            <h3 style="text-align: left; margin-top: 25px;">Phase 3 : Logique de Résolution (Backtracking)</h3>
+            <p>C'est le "cerveau" du solveur. Le <strong>Backtracking</strong> (ou "retour sur trace") est un algorithme qui imite la façon dont un humain résoudrait la grille. Il trouve la première case vide, essaie le chiffre '1', vérifie si le coup est valide (ne viole pas les règles de ligne, colonne ou bloc). Si c'est valide, il passe à la case suivante. S'il se retrouve bloqué 10 coups plus tard (parce que son '1' initial était une erreur), il <strong>revient en arrière</strong> (backtrack), efface son '1' et essaie '2'. Il continue ce processus jusqu'à trouver la solution complète.</p>
+        </div>
+
+    </section>
 
     <footer>
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
 
-    <div id="loader" class="loader"></div>
-
-    <div class="toggle-switch">
-        <label for="darkMode">Mode sombre</label>
-        <input type="checkbox" id="darkMode" name="darkMode">
-    </div>
-
-    <!-- Popup Video -->
-    <div id="videoPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script>
-        // Update the rating value dynamically
-        document.getElementById('rating').addEventListener('input', function() {
-            document.getElementById('rating-value').textContent = this.value;
-        });
-
-        // Open Video Popup
-        document.getElementById('openVideo').addEventListener('click', function() {
-            const videoUrl = 'https://www.youtube.com/embed/EottUVUXehw'; // Remplacer par l'URL de la vidéo de démonstration
-            document.getElementById('videoFrame').src = videoUrl;
-            document.getElementById('videoPopup').style.display = 'flex';
-        });
-
-        // Close Video Popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            document.getElementById('videoFrame').src = '';
-            document.getElementById('videoPopup').style.display = 'none';
-        });
-    </script>
 </body>
 </html>

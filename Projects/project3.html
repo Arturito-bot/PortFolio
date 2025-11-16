@@ -3,88 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet - Convertisseur Youtube Mp3/Mp4</title>
+    <title>Projet - Contrôle de Stabilité Drone</title>
+    
     <link rel="stylesheet" href="styles1.css">
+    
+    <link rel="stylesheet" href="project-identities.css">
 </head>
 <body>
     <header class="header">
         <nav>
             <ul class="nav-list">
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="../index.html">Retour à l'accueil</a></li>
             </ul>
         </nav>
     </header>
+    
+        <section class="project-hero-drone">
+            <div class="hero-content">
+                <h1>Simulation et Contrôle PID d'un Quadrirotor</h1>
+                <p class="hero-subtitle">
+                    Projet d'ingénierie de contrôle visant à étudier et simuler la stabilité d'un drone quadrirotor. L'objectif était de modéliser sa dynamique de vol et d'implémenter différents régulateurs (PID, placement de pôles) via MATLAB et Simulink.
+                </p>
+                <p class="hero-credits">
+                    Basé sur l'article scientifique "PID vs LQ Control Techniques Applied to an Indoor Micro Quadrotor" (IROS 2004).
+                </p>
+            </div>
+        </section>
 
-    <section class="project-overview">
-        <h1>Autoclicker</h1>
-        <p>Logiciel qui permet de simuler un click de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres</p>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Caractéristiques</h3>
-            <ul>
-                <li>Programmé en Python</li>
-                <li>Transformé en .exe pour une facilité d'exécution</li>
-                <li>Logo fait maison</li>
-            </ul>
+    <section class="project-docs docs-drone" style="background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%;">Rapport d'Étude (Pièce Maîtresse)</h2>
+        
+        <p style="text-align: center;">Ce projet étant une simulation d'ingénierie, le livrable principal est le rapport d'étude ci-dessous.</p>
+        
+        <div class="pdf-container">
+            <embed src="../Docs/Projet_Drone.pdf#toolbar=0&zoom=100&view=FitH" 
+                   type="application/pdf" width="800" height="600" style="border: 1px solid #ccc; border-radius: 8px; max-width: 100%;" />
+            <a href="../Docs/Projet_Drone.pdf" download class="button button-drone" style="text-decoration: none; margin-top: 15px;">
+                Télécharger le rapport (.pdf)
+            </a>
         </div>
-        <div class="feature-card">
-            <h3>Avantages</h3>
-            <ul>
-                <li>Eviter d'être considérer "AFK", utile dans plusieurs utilisations, pro ou loisir</li>
-                <li>A des options qui permettant d'éviter d'être repéré par des anti-autoclickers</li>
-                <li>Interface graphique intégré permettant une facilité d'utiliation et de personalisation</li>
-            </ul>
+    </section>
+
+    <div class="button-container">
+        <a href="https://github.com/ton-pseudo/drone-simulation-project" target="_blank" class="button button-drone">
+            Voir les fichiers de simulation (GitHub)
+        </a>
+    </div>
+
+    <section class="tech-stack tech-drone" style="padding: 30px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Outils et Concepts Clés</h2>
+        <div class="tech-pills">
+            <span class="tech-main">MATLAB</span>
+            <span class="tech-main">Simulink</span>
+            <span class="tech-main">Théorie du Contrôle</span>
+            <span>Régulateurs PID</span>
+            <span>Modélisation d'état</span>
+            <span>Placement de Pôles</span>
         </div>
     </section>
 
-    <!-- Déplacement du bouton "Voir démonstration" en dessous de la section features -->
-    <section class="cta-section">
-        <button class="button" id="openVideo">
-            Voir démonstration
-            <span class="button-span"> ─ Convertisseur Youtube</span>
-        </button>
-    </section>
+    <section class="features features-drone" style="padding: 40px 20px;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Méthodologie du Projet</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
 
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>1. Modélisation Dynamique</h3>
+                <p>Simulation des dynamiques de vol fondamentales du quadrirotor (roulis, tangage, lacet) en se basant sur les équations physiques extraites de la publication scientifique.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>2. Implémentation des Contrôleurs</h3>
+                <p>Conception et implémentation de régulateurs PID pour stabiliser l'attitude du drone. Application d'une commande plus avancée par placement de pôles sur le modèle linéarisé.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>3. Analyse et Validation</h3>
+                <p>Analyse de la stabilité des systèmes en boucle fermée et validation des performances des contrôleurs. Étude de la régulation PID filtrée dans un contexte discret (proche du réel).</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="project-details details-drone" style="padding: 40px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Compétences Acquises</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Modélisation de Systèmes</h3>
+                <p>Capacité à traduire un système physique (drone) en un modèle mathématique et un schéma de simulation (Simulink) fonctionnel.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Conception de Contrôleurs</h3>
+                <p>Maîtrise de la conception et du réglage de contrôleurs automatiques classiques (PID) et modernes (placement de pôles) pour la stabilisation de systèmes.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Recherche Académique</h3>
+                <p>Compétence à lire, analyser et traduire une publication scientifique en anglais pour en extraire les paramètres et les équations nécessaires à un projet concret.</p>
+            </div>
+
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
     </footer>
 
-    <div id="loader" class="loader"></div>
-
-    <div class="toggle-switch">
-        <label for="darkMode">Mode sombre</label>
-        <input type="checkbox" id="darkMode" name="darkMode">
-    </div>
-
-    <!-- Popup Video -->
-    <div id="videoPopup" class="popup">
-        <div class="popup-content">
-            <span class="close" id="closePopup">&times;</span>
-            <iframe id="videoFrame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <script>
-        // Update the rating value dynamically
-        document.getElementById('rating').addEventListener('input', function() {
-            document.getElementById('rating-value').textContent = this.value;
-        });
-
-        // Open Video Popup
-        document.getElementById('openVideo').addEventListener('click', function() {
-            const videoUrl = 'https://www.youtube.com/embed/EottUVUXehw'; // Remplacer par l'URL de la vidéo de démonstration
-            document.getElementById('videoFrame').src = videoUrl;
-            document.getElementById('videoPopup').style.display = 'flex';
-        });
-
-        // Close Video Popup
-        document.getElementById('closePopup').addEventListener('click', function() {
-            document.getElementById('videoFrame').src = '';
-            document.getElementById('videoPopup').style.display = 'none';
-        });
-    </script>
 </body>
 </html>

@@ -4,24 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projet - Autoclicker</title>
+    
     <link rel="stylesheet" href="styles1.css">
-    <style>
-        /* Optionnel : centrer la vidéo et l’adapter */
-        .video-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 40px;
-        }
-
-        video {
-            width: 80%;
-            max-width: 700px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-    </style>
+    
+    <link rel="stylesheet" href="project-identities.css">
 </head>
 <body>
     <header class="header">
@@ -32,51 +18,89 @@
         </nav>
     </header>
 
-    <section class="project-overview">
-        <h1>Autoclicker</h1>
-        <p>Logiciel qui permet de simuler un clic de souris, plusieurs options sont disponibles pour simuler une utilisation humaine pour éviter les bans ou autres.</p>
-    </section>
-
-    <section class="features">
-        <div class="feature-card">
-            <h3>Caractéristiques</h3>
-            <ul>
-                <li>Programmé en Python</li>
-                <li>Transformé en .exe pour une facilité d'exécution</li>
-                <li>Logo fait maison</li>
-            </ul>
-        </div>
-        <div class="feature-card">
-            <h3>Avantages</h3>
-            <ul>
-                <li>Éviter d'être considéré "AFK"</li>
-                <li>Des options qui permettent d'éviter d'être repéré</li>
-                <li>Interface graphique intégrée</li>
-            </ul>
+    <section class="project-hero-autoclicker">
+        <div class="hero-content">
+            <h1>Autoclicker à Simulation Humaine</h1>
+            <p class="hero-subtitle">
+                Un utilitaire Python conçu pour automatiser les clics de souris. Au-delà d'un simple clicker, ce projet intègre des options avancées de randomisation pour simuler un comportement humain et éviter la détection par les systèmes anti-triche.
+            </p>
         </div>
     </section>
 
-    <!-- Vidéo visible directement -->
-    <section class="video-section">
-        <h2>Démo du projet</h2>
-        <video id="autoclickerVideo" muted controls preload="none">
+    <section class="video-section" style="display: flex; flex-direction: column; align-items: center; margin: 40px 0;">
+        <h2 style="text-align: center; margin-bottom: 20px; color: #2c3e50;">Démo du projet</h2>
+        <video id="autoclickerVideo" muted controls loop preload="none" style="width: 80%; max-width: 700px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
             <source src="../Video/demo_autoclicker.mp4" type="video/mp4">
             Votre navigateur ne supporte pas la lecture vidéo.
         </video>
     </section>
 
-    <section class="feedback">
-        <h2>Donnez votre avis</h2>
-        <form>
-            <label for="rating">Évaluez le projet :</label>
-            <input type="range" id="rating" name="rating" min="1" max="5" value="3">
-            <span>Note: <span id="rating-value">3</span></span>
+    <div class="button-container">
+        <a href="https://github.com/ton-pseudo/autoclicker-project" target="_blank" class="button button-autoclicker">
+            Voir le code sur GitHub
+        </a>
+    </div>
 
-            <label for="comment">Votre commentaire :</label>
-            <textarea id="comment" name="comment" placeholder="Votre avis sur ce projet" rows="4"></textarea>
+    <section class="tech-stack tech-autoclicker" style="padding: 30px 20px; background-color: #f9f9f9;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies Utilisées</h2>
+        <div class="tech-pills">
+            <span class="tech-main">Python</span>
+            <span>Tkinter</span>
+            <span>ttkbootstrap</span>
+            <span class="tech-main">Threading</span>
+            <span class="tech-main">pynput</span>
+            <span>PyAutoGUI</span>
+        </div>
+    </section>
 
-            <button type="submit" class="button">Envoyer</button>
-        </form>
+    <section class="features features-autoclicker" style="padding: 40px 20px;">
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Fonctionnalités Clés</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Simulation Humaine (Anti-Détection)</h3>
+                <p>Option pour ajouter de l'aléatoire à l'intervalle entre les clics (ex: 100ms ± 20ms) et pour déplacer légèrement la souris après chaque clic, simulant un comportement naturel.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Contrôle Total</h3>
+                <p>Activation/Désactivation par raccourci clavier global (touche '9') et arrêt d'urgence sécurisé ('Echap'). L'intervalle de clics est entièrement personnalisable par l'utilisateur.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Interface & Performance</h3>
+                <p>Interface claire (Tkinter/ttkbootstrap) affichant les clics par seconde (CPS) en temps réel. Le cœur du clicker peut atteindre des cadences très élevées (jusqu'à 100 CPS).</p>
+            </div>
+
+        </div>
+    </section>
+    
+    <section class="project-details details-autoclicker" style="padding: 40px 20px; background-color: #f9f9f9;">
+        
+        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Architecture et Défis Techniques</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 1 : Écouteurs de Raccourcis Globaux</h3>
+                <p><strong>Problème :</strong> Les `bind` de Tkinter ne fonctionnent que si la fenêtre a le focus. L'autoclicker doit pouvoir être démarré/arrêté n'importe quand, même s'il est minimisé.</p>
+                <p><strong>Solution :</strong> Utilisation d'un écouteur global (`pynput.keyboard.Listener`) dans un thread dédié. Ce thread écoute en permanence les touches '9' et 'Echap' sans interférer avec la GUI.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 2 : GUI non réactive (Multithreading)</h3>
+                <p><strong>Problème :</strong> La boucle `while True:` du clicker, si elle est sur le thread principal, "gèle" complètement l'interface Tkinter, empêchant toute mise à jour ou interaction.</p>
+                <p><strong>Solution :</strong> L'autoclicker lui-même (`clicker_loop`) est lancé dans un second thread "worker", séparé de la GUI et de l'écouteur de clavier, assurant une réactivité parfaite de l'interface.</p>
+            </div>
+
+            <div class="feature-card" style="flex: 1; min-width: 300px;">
+                <h3>Défi 3 : Calcul des CPS en temps réel</h3>
+                <p><strong>Problème :</strong> Calculer et afficher les CPS nécessite de compter les clics sur une période donnée sans bloquer le thread du clicker (un `time.sleep(1)` serait trop imprécis).</p>
+                <p><strong>Solution :</strong> Implémentation d'un compteur qui s'incrémente à chaque clic et d'une fonction séparée (souvent dans un autre thread ou via `root.after`) qui calcule le delta par rapport à la seconde précédente et met à jour le label.</p>
+            </div>
+
+        </div>
     </section>
 
     <footer>
@@ -84,25 +108,21 @@
     </footer>
 
     <script>
-        // Met à jour la valeur de la note dynamiquement
-        document.getElementById('rating').addEventListener('input', function() {
-            document.getElementById('rating-value').textContent = this.value;
-        });
-
-        // Auto-play / pause de la vidéo quand elle est visible
         const video = document.getElementById('autoclickerVideo');
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    video.play(); // la vidéo devient visible → lecture
-                } else {
-                    video.pause(); // elle sort du champ → pause
-                }
-            });
-        }, { threshold: 0.5 }); // 50% visible pour déclencher
+        if (video) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play();
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, { threshold: 0.5 }); 
 
-        observer.observe(video);
+            observer.observe(video);
+        }
     </script>
 </body>
 </html>
