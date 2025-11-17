@@ -18,12 +18,19 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre pour meilleure visibilité */
 }
 
-/* Navigation */
+/* Navigation (Sticky) */
 nav {
     background-color: #151515;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    /* LIGNES AJOUTÉES */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    box-sizing: border-box; /* Pour que le centrage soit parfait */
 }
 
 .nav-list {
@@ -32,6 +39,7 @@ nav {
     margin: 0;
     display: flex;
     justify-content: center;
+    
 }
 
 .nav-list li {
