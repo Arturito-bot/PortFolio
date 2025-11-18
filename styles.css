@@ -191,6 +191,7 @@ nav ul li a:hover {
     margin-top: 15px;
     font-size: 22px;
     color: #333;
+    text-align: center;
 }
 
 .project p {
@@ -207,7 +208,7 @@ form {
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #contact h2 { /* Déplacé à l'intérieur de la règle form */
@@ -241,7 +242,7 @@ button:hover {
 /* --------------------------- FOOTER --------------------------- */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     background: #222;
     color: white;
 }
@@ -287,7 +288,7 @@ footer {
   transition-duration: 0.3s;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
   background-color: #0a66c2;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .sign {
