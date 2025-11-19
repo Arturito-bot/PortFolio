@@ -6,77 +6,159 @@
     <title>Projet - Télémétrie Mini-Fusée</title>
     
     <link rel="stylesheet" href="styles1.css">
-    
     <link rel="stylesheet" href="project-identities.css">
+
+    <style>
+        /* --- STYLE "EN CONSTRUCTION" --- */
+        .construction-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            
+            /* L'effet de flou */
+            backdrop-filter: blur(4px) grayscale(60%);
+            background-color: rgba(255, 255, 255, 0.1);
+            
+            /* Permet de cliquer à travers le flou... */
+            pointer-events: none; 
+            
+            /* Centrage et empilement vertical */
+            display: flex;
+            flex-direction: column; /* Pour mettre le bouton sous le badge */
+            justify-content: center;
+            align-items: center;
+            gap: 30px; /* Espace entre le badge et le bouton */
+        }
+
+        .construction-badge {
+            background-color: #f39c12;
+            color: white;
+            padding: 20px 40px;
+            font-size: 2em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: 4px dashed white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transform: rotate(-5deg);
+            animation: constructionPulse 2s infinite;
+        }
+
+        /* Nouveau bouton "Retour" */
+        .construction-btn {
+            /* ... MAIS rend le bouton cliquable ! */
+            pointer-events: auto; 
+            
+            background-color: #333;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .construction-btn:hover {
+            transform: scale(1.05);
+            background-color: #000;
+        }
+
+        @keyframes constructionPulse {
+            0% { transform: rotate(-5deg) scale(1); }
+            50% { transform: rotate(-5deg) scale(1.05); }
+            100% { transform: rotate(-5deg) scale(1); }
+        }
+    </style>
 </head>
+<body>
+
+    <div class="construction-overlay">
+        <div class="construction-badge">
+            🚧 En Construction 🚧
+        </div>
+        
+        <a href="../index.html#projects" class="construction-btn">
+            <span>↩</span> Retour aux projets
+        </a>
+    </div>
+
     <nav>
         <ul class="nav-list">
             <li><a href="../index.html#projects">Retour à l'accueil</a></li>
         </ul>
     </nav>
- 
 
-    <section class="project-hero-rocket">
-        <div class="hero-content">
-            <h1>Système Embarqué pour Mini-Fusée</h1>
-            <p class="hero-subtitle">
-                Implémentation d'un système embarqué de télémétrie pour l'acquisition et la transmission en temps réel des performances d'une fusée miniature.
-            </p>
+    <div class="page-wrapper">
+        <section class="project-hero-rocket">
+            <div class="hero-content">
+                <h1>Système Embarqué pour Mini-Fusée</h1>
+                <p class="hero-subtitle">
+                    Implémentation d'un système embarqué de télémétrie pour l'acquisition et la transmission en temps réel des performances d'une fusée miniature.
+                </p>
+            </div>
+        </section>
+
+        <div class="button-container">
+            <a href="../index.html#projects" target="_blank" class="button button-rocket">
+                Voir le code sur GitHub
+            </a>
         </div>
-    </section>
 
-    <div class="button-container">
-        <a href="https://github.com/ton-pseudo/rocket-telemetry" target="_blank" class="button button-rocket">
-            Voir le code sur GitHub
-        </a>
-    </div>
+        <section class="tech-stack tech-rocket" style="padding: 30px 20px; background-color: #f9f9f9;">
+            <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies & Matériel</h2>
+            <div class="tech-pills">
+                <span class="tech-main">C++ / Arduino</span>
+                <span class="tech-main">Capteurs (MPU6050)</span>
+                <span>Baromètre (BMP280)</span>
+                <span class="tech-main">Module RF (LoRa)</span>
+                <span>Conception PCB (KiCad)</span>
+                <span>Soudure</span>
+            </div>
+        </section>
 
-    <section class="tech-stack tech-rocket" style="padding: 30px 20px; background-color: #f9f9f9;">
-        <h2 style="text-align: center; width: 100%; margin-bottom: 20px;">Technologies & Matériel</h2>
-        <div class="tech-pills">
-            <span class="tech-main">C++ / Arduino</span>
-            <span class="tech-main">Capteurs (MPU6050)</span>
-            <span>Baromètre (BMP280)</span>
-            <span class="tech-main">Module RF (LoRa)</span>
-            <span>Conception PCB (KiCad)</span>
-            <span>Soudure</span>
-        </div>
-    </section>
+        <section class="features features-rocket" style="padding: 40px 20px;">
+            <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Architecture du Système</h2>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
 
-    <section class="features features-rocket" style="padding: 40px 20px;">
-        <h2 style="text-align: center; width: 100%; margin-bottom: 30px;">Architecture du Système</h2>
+                <div class="feature-card" style="flex: 1; min-width: 300px;">
+                    <h3>1. Acquisition de Données (Vol)</h3>
+                    <p>Le cœur de la fusée est un microcontrôleur (Arduino Nano) qui lit les données d'une centrale inertielle (MPU6050) pour l'accélération et l'orientation, et d'un baromètre (BMP280) pour l'altitude.</p>
+                </div>
+
+                <div class="feature-card" style="flex: 1; min-width: 300px;">
+                    <h3>2. Transmission RF (Télémétrie)</h3>
+                    <p>Les données collectées sont formatées et envoyées en temps réel vers le sol via un module de communication longue portée ( LoRa ), permettant un suivi en direct de la trajectoire et de l'apogée.</p>
+                </div>
+
+                <div class="feature-card" style="flex: 1; min-width: 300px;">
+                    <h3>3. Station au Sol & Visualisation</h3>
+                    <p>Une station de réception au sol (un autre module RF connecté à un PC) reçoit les paquets de données, les décode et les affiche sur une interface simple  (GUI en Python ou moniteur série) pour analyse post-vol.</p>
+                </div>
+
+            </div>
+        </section>
         
-        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; max-width: 1200px; margin: 0 auto;">
-
-            <div class="feature-card" style="flex: 1; min-width: 300px;">
-                <h3>1. Acquisition de Données (Vol)</h3>
-                <p>Le cœur de la fusée est un microcontrôleur (ex: Arduino Nano) qui lit les données d'une centrale inertielle (MPU6050) pour l'accélération et l'orientation, et d'un baromètre (BMP280) pour l'altitude.</p>
+        <section class="project-docs docs-rocket" style="background-color: #f9f9f9; text-align: center; padding-bottom: 40px;">
+            <h2 style="text-align: center; width: 100%;">Schéma du Système Embarqué</h2>
+            <p style="text-align: center;">Photo du prototype ou schéma de la carte de vol.</p>
+            <div style="padding: 20px;">
+                <img src="../Docs/schema_fusee.png" alt="Schéma du système embarqué" style="max-width: 80%; width: 600px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
             </div>
+        </section>
 
-            <div class="feature-card" style="flex: 1; min-width: 300px;">
-                <h3>2. Transmission RF (Télémétrie)</h3>
-                <p>Les données collectées sont formatées et envoyées en temps réel vers le sol via un module de communication longue portée (ex: LoRa ou XBee), permettant un suivi en direct de la trajectoire et de l'apogée.</p>
-            </div>
-
-            <div class="feature-card" style="flex: 1; min-width: 300px;">
-                <h3>3. Station au Sol & Visualisation</h3>
-                <p>Une station de réception au sol (un autre module RF connecté à un PC) reçoit les paquets de données, les décode et les affiche sur une interface simple (ex: GUI en Python ou moniteur série) pour analyse post-vol.</p>
-            </div>
-
-        </div>
-    </section>
-    
-    <section class="project-docs docs-rocket" style="background-color: #f9f9f9; text-align: center; padding-bottom: 40px;">
-        <h2 style="text-align: center; width: 100%;">Schéma du Système Embarqué</h2>
-        <p style="text-align: center;">Photo du prototype ou schéma de la carte de vol.</p>
-        <div style="padding: 20px;">
-            <img src="../Docs/schema_fusee.png" alt="Schéma du système embarqué" style="max-width: 80%; width: 600px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Arthur Westphal. Tous droits réservés.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
